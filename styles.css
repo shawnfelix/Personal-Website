@@ -1,24 +1,112 @@
 @font-face {
+	font-family: Biko-Light-Upper;
+	src: url("fonts/Biko_Light-Restricted.otf");
+}
+@font-face {
 	font-family: Stockholm;
-	src: url("fonts/Stockholm.ttf");
+	src: url("fonts/Stockholm_Mono.ttf");
 }
 @font-face {
 	font-family: Brasilia;
 	src: url("fonts/Brasilia.ttf");
 }
+html {height:100%;}
+body {-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;overflow:hidden;background:#2b2b2b; font-family: Biko-Light-Upper; font-size:30px; height:100%;}
 
-body {overflow:hidden;background:#2b2b2b; font-family: Stockholm; font-size:30px;}
+nav {background: grey;height:200px;}
 
-
-.font-blue{color: #7373b9;}
+/*#f78b1c #6cc8af #eddfba #e74612; */
+.font-blue-old{color: #7373b9;}
+.font-blue {color:#6cc8af;}
 .font-yellow{color: #FFC88D;}
+.font-lines { border-top:2px solid #FFC88D
+	; border-bottom:2px solid #FFC88D; display:inline-block; }
 
 
-
-
-
-
-#main-pane {width:100%; height:100%;position:absolute; top: 0;}
+#canvas-wrapper {position:fixed;}
+#canvas {position:fixed;}
+#main-pane {width:70%; height:100%;top: 0; margin:0 auto; position:relative;}
 #content {height:100%;}
 #footer {bottom:0;}
 
+
+/* NAV STYLES */
+#logo {background:#eddfba;}
+
+#nav-list { }
+.nav-link-box {width:155px; min-height:155px; position:relative; display:inline-block; display:inline-block;
+				border-bottom-left-radius: 5px; border-bottom-right-radius: 3px;}
+.nav-link-box > * {position:absolute;}
+.nav-link-title {width:100%; text-align:center; bottom:0;position:absolute;}
+.nav-link-go { font-weight:bold; opacity:0;}
+
+#nav-link-resume {background:#f78b1c;}
+#nav-link-projects {background:#6cc8af;}
+#nav-link-linkedin {background:#eddfba;}
+
+
+.cancel{
+	animation-name: cancel;
+	-webkit-animation-name: cancel;	
+
+	animation-duration: .5s;	
+	-webkit-animation-duration: .5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;		
+
+	-webkit-backface-visibility: hidden;
+	animation-fill-mode: forwards;				
+}
+
+@keyframes cancel {
+	  0% {transform: scaleY(1);}
+	 35% {transform: scaleY(.7142);}	
+	 65% {transform: scaleY(.8474);}
+	100% {transform: scaleY(.80);}		
+}
+/* ANIMATIONS */
+.stretchDown{
+	animation-name: stretchDown;
+	-webkit-animation-name: stretchDown;	
+
+	animation-duration: .5s;	
+	-webkit-animation-duration: .5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;		
+	-webkit-backface-visibility: hidden;
+	animation-fill-mode: forwards;				
+}
+
+@keyframes stretchDown {
+	  0% {transform: scaleY(1);}
+	 35% {transform: scaleY(1.40);}	
+	 65% {transform: scaleY(1.18);}
+	100% {transform: scaleY(1.25);}		
+}
+
+.stretchUp{
+	animation-name: stretchUp;
+	-webkit-animation-name: stretchUp;	
+
+	animation-duration: .2s;	
+	-webkit-animation-duration: .2s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;		
+	-webkit-backface-visibility: hidden;
+	animation-fill-mode: forwards;				
+}
+
+@keyframes stretchUp {
+	  0% {transform: scaleY(1.1);}
+	100% {transform: scaleY(1);}		
+}
