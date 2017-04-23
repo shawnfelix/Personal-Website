@@ -1,0 +1,96 @@
+/* TODO - RENAME THIS */
+.navNoStretch{
+	animation-name: navNoStretch;
+	-webkit-animation-name: navNoStretch;	
+
+	animation-duration: .5s;	
+	-webkit-animation-duration: .5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;		
+
+	-webkit-backface-visibility: hidden;
+	animation-fill-mode: forwards;				
+}
+
+@keyframes navNoStretch {
+	  0% {transform: scaleY(1);}
+	 35% {transform: scaleY(.7142);}	
+	 65% {transform: scaleY(.8474);}
+	100% {transform: scaleY(.80);}		
+}
+/* ANIMATIONS */
+.stretchDown{
+	animation-name: stretchDown;
+	-webkit-animation-name: stretchDown;	
+
+	animation-duration: .5s;	
+	-webkit-animation-duration: .5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;		
+	-webkit-backface-visibility: hidden;
+	animation-fill-mode: forwards;				
+}
+
+@keyframes stretchDown {
+	  0% {transform: scaleY(1);}
+	 35% {transform: scaleY(1.40);}	
+	 65% {transform: scaleY(1.18);}
+	100% {transform: scaleY(1.25);}		
+}
+
+.stretchUp{
+	animation-name: stretchUp;
+	-webkit-animation-name: stretchUp;	
+
+	animation-duration: .2s;	
+	-webkit-animation-duration: .2s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;		
+	-webkit-backface-visibility: hidden;
+	animation-fill-mode: forwards;				
+}
+
+@keyframes stretchUp {
+	  0% {transform: scaleY(1.1);}
+	100% {transform: scaleY(1);}		
+}
+
+.opacityFlash{
+	animation-name: opacityFlash;
+	-webkit-animation-name: opacityFlash;	
+
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	animation-delay: .5s;
+	-webkit-animation-delay: .5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+
+	visibility: visible !important;
+	animation-play-state: running;
+
+	transform: scaleY(.8);
+}
+.opacityFlash {
+}
+
+@keyframes opacityFlash {
+	  0% {opacity: .1;}
+	  50% {opacity: .6;}
+	  100% { opacity: .1; }
+
+}

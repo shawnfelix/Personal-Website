@@ -1,0 +1,56 @@
+@font-face {
+	font-family: Biko-Light-Upper;
+	src: url("../fonts/Biko_Light-Restricted.otf");
+}
+@font-face {
+	font-family: Biko-Regular;
+	src: url("../fonts/Biko_Regular.otf");
+}
+@font-face {
+	font-family: Biko-Bold;
+	src: url("../fonts/Biko_Bold.otf");
+}
+@font-face {
+	font-family: Stockholm;
+	src: url("../fonts/Stockholm_Mono.ttf");
+}
+@font-face {
+	font-family: Brasilia;
+	src: url("../fonts/Brasilia.ttf");
+}
+html {height:100%;}
+body {-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;overflow:hidden;background:#2b2b2b; font-family: Biko-Regular; font-size:30px; height:100%;}
+
+nav {background: grey;height:200px;}
+
+/*#f78b1c #6cc8af #eddfba #e74612; */
+.font-blue-old{color: #7373b9;}
+.font-blue {color:#6cc8af;}
+.font-yellow{color: #FFC88D;}
+.font-lines { border-top:2px solid #FFC88D
+	; border-bottom:2px solid #FFC88D; display:inline-block; }
+
+
+#canvas-wrapper {position:fixed;}
+#canvas {position:fixed;}
+#main-pane {width:70%; height:100%;top: 0; margin:0 auto; position:relative;}
+#content {height:100%;}
+#footer {bottom:0;}
+
+
+/* NAV STYLES */
+#logo {background:#eddfba;}
+
+#nav-list { }
+.nav-link-box {width:155px; min-height:155px; position:relative;cursor:pointer;  display:inline-block; display:inline-block;
+				border-bottom-left-radius: 5px; border-bottom-right-radius: 3px;}
+.nav-link-box > * {position:absolute;}
+.nav-link-title {width:100%; text-align:center; bottom:0;font-size:25px;}
+.nav-link-tile { width:80px; height:80px; margin: 0 auto; opacity: 0;left:0; right: 0;top:20px; text-align:center;line-height:80px;}
+.nav-link-tile > * {width:100%;}
+.nav-link-go { font-weight:bold;  background:grey; border-radius: 40px;}
+
+#nav-link-resume {background:#f78b1c;}
+#nav-link-projects {background:#6cc8af;}
+#nav-link-linkedin {background:#eddfba;}
