@@ -23,3 +23,16 @@ $(".nav-link-box").hover(
     $(this).children(".nav-link-tile").removeClass("opacityFlash");
   }
 )
+
+//nav heading gets small on scroll down
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+    $('#logo-fn').addClass('inline');
+    $('#logo-ln').addClass('inline');
+  } else {
+    $('nav').removeClass('shrink');
+    $('#logo-fn').removeClass('inline');
+    $('#logo-ln').removeClass('inline');
+  }
+});

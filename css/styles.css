@@ -18,16 +18,37 @@
 	font-family: Brasilia;
 	src: url("../fonts/Brasilia.ttf");
 }
-html {height:100%;}
-body {-webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;overflow:hidden;background:#2b2b2b; font-family: Biko-Regular; font-size:30px; height:100%;}
+html {overflow:scroll;}
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow:hidden;background:#2b2b2b;
+	font-family: Biko-Regular;
+	font-size:30px;
+	height:1000px;
+}
 
-nav {background: grey;height:200px;}
+nav {
+	z-index:100;
+	position:fixed;
+	background: rgba(128, 128, 128, 0.52);
+	max-height:120px;
+	height:1200px;
+	right:0;
+	left:0;
+	cursor:default;
+	transition: max-height .5s;
+}
+nav.shrink { max-height:70px; }
+nav.shrink .nav-link-box {min-height:55px;} 
+nav.shrink .nav-link-tile {display:none;}
+
 
 /*#f78b1c #6cc8af #eddfba #e74612; */
-.font-blue-old{color: #7373b9;}
 .font-blue {color:#6cc8af;}
-.font-yellow{color: #FFC88D;}
+.font-light-orange{color: #FFC88D;}
+.font-orange {color:#f78b1c;}
+
 .font-lines { border-top:2px solid #FFC88D
 	; border-bottom:2px solid #FFC88D; display:inline-block; }
 
@@ -39,12 +60,17 @@ nav {background: grey;height:200px;}
 #footer {bottom:0;}
 
 
-/* NAV STYLES */
-#logo {background:#eddfba;}
+/* NAV STYLES background:#eddfba;*/
+#logo {font-size:60px; line-height:50px; font-family:Biko-Bold;}
+#logo-text {margin-top:10px;}
+#logo-fn {color:#f4b26c;}
+#logo-ln {padding-left:210px;}
+.inline {display:inline-block; height:70px;}
+#logo-ln.inline {padding-left: 5px !important;}
 
 #nav-list { }
 .nav-link-box {width:155px; min-height:155px; position:relative;cursor:pointer;  display:inline-block; display:inline-block;
-				border-bottom-left-radius: 5px; border-bottom-right-radius: 3px;}
+				border-bottom-left-radius: 5px; border-bottom-right-radius: 3px; transition: min-height .5s;}
 .nav-link-box > * {position:absolute;}
 .nav-link-title {width:100%; text-align:center; bottom:0;font-size:25px;}
 .nav-link-tile { width:80px; height:80px; margin: 0 auto; opacity: 0;left:0; right: 0;top:20px; text-align:center;line-height:80px;}
@@ -54,3 +80,14 @@ nav {background: grey;height:200px;}
 #nav-link-resume {background:#f78b1c;}
 #nav-link-projects {background:#6cc8af;}
 #nav-link-linkedin {background:#eddfba;}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
