@@ -18,7 +18,7 @@
 	font-family: Brasilia;
 	src: url("../fonts/Brasilia.ttf");
 }
-html {overflow:scroll;}
+html {}
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -26,6 +26,8 @@ body {
 	font-family: Biko-Regular;
 	font-size:30px;
 	height:1000px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 nav {
@@ -53,20 +55,16 @@ nav.shrink .nav-link-tile {display:none;}
 	; border-bottom:2px solid #FFC88D; display:inline-block; }
 
 
-#canvas-wrapper {position:fixed;}
-#canvas {position:fixed;}
-#main-pane {width:70%; height:100%;top: 0; margin:0 auto; position:relative;}
-#content {height:100%;}
-#footer {bottom:0;}
-
 
 /* NAV STYLES background:#eddfba;*/
+.nav-container {height:100%;background:#676767;}
 #logo {font-size:60px; line-height:50px; font-family:Biko-Bold;}
 #logo-text {margin-top:10px;}
 #logo-fn {color:#f4b26c;}
 #logo-ln {padding-left:210px;}
 .inline {display:inline-block; height:70px;}
 #logo-ln.inline {padding-left: 5px !important;}
+/*.logo-shrink { background:#c8432e; padding: 5px;margin-top: 5px; width: 390px; border-radius: 7px;}*/
 
 #nav-list { }
 .nav-link-box {width:155px; min-height:155px; position:relative;cursor:pointer;  display:inline-block; display:inline-block;
@@ -80,6 +78,18 @@ nav.shrink .nav-link-tile {display:none;}
 #nav-link-resume {background:#f78b1c;}
 #nav-link-projects {background:#6cc8af;}
 #nav-link-linkedin {background:#eddfba;}
+
+
+/* MAIN CONTAINER */
+#canvas-wrapper {position:fixed;}
+#canvas {position:fixed;}
+#main-pane {height:100%;top: 0; margin:0 auto; position:relative;background: rgba(128, 128, 128, 0.38);}
+#content {height:100%;}
+
+
+
+/* FOOTER */
+#footer {bottom:0;}
 
 
 .noselect {

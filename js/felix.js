@@ -30,9 +30,11 @@ $(window).scroll(function() {
     $('nav').addClass('shrink');
     $('#logo-fn').addClass('inline');
     $('#logo-ln').addClass('inline');
+    $('#logo-text').addClass('logo-shrink');
   } else {
     $('nav').removeClass('shrink');
     $('#logo-fn').removeClass('inline');
     $('#logo-ln').removeClass('inline');
+    $('#logo-text').removeClass('logo-shrink');
   }
 });
