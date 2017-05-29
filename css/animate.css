@@ -85,8 +85,6 @@
 
 	transform: scaleY(.8);
 }
-.opacityFlash {
-}
 
 @keyframes opacityFlash {
 	  0% {opacity: .1;}
@@ -95,3 +93,31 @@
 
 }
 
+
+.slideUp {
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;	
+
+	animation-duration: .2s;	
+	-webkit-animation-duration: .2s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;		
+	-webkit-backface-visibility: hidden;
+	animation-fill-mode: forwards;			
+}
+
+@keyframes slideUp {
+	0% { transform:translateY(6%); }
+	100%{ transform:translateY(0%); }
+}
+
+.breathe {
+
+}
+
+@keyframes breathe {
+
+}

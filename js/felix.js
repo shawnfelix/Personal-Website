@@ -1,3 +1,11 @@
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
 //Mouseover navbar links
 $(".nav-link-box").hover(
   function(){//on mouseover
@@ -36,5 +44,18 @@ $(window).scroll(function() {
     $('#logo-fn').removeClass('inline');
     $('#logo-ln').removeClass('inline');
     $('#logo-text').removeClass('logo-shrink');
+  }
+});
+
+//footer contact animation
+
+$('#footer-contact-button').click(function(){
+  var toggle = $('#footer-pixel-wrapper').hasClass('slideUp');
+
+  if(toggle){
+    $('#footer-pixel-wrapper').removeClass('slideUp');
+  }
+  else {
+    $('#footer-pixel-wrapper').addClass('slideUp');
   }
 });
