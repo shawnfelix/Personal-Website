@@ -30,6 +30,8 @@ body {
 	overflow-x: hidden;
 }
 p {font-size:23px;}
+a { color:#f78b1c; }
+a:hover {color:#b56513}
 
 nav {
 	z-index:100;
@@ -87,7 +89,14 @@ nav.shrink .nav-link-tile {display:none;}
 #main-pane {color: #f3ecdb;min-height: 100vh;padding:180px 100px 0px; top: 0; margin:0 auto; position:relative;background: rgba(128, 128, 128, 0.38);}
 #content {height:100%;}
 
+#profile-circle {margin-top: 25px;width:200px;height:200px; border-radius:100px; overflow:hidden;float:right;}
+#profile-circle > img { width:100%; }
 
+
+/* PROFICIENCY TABLE */
+#proficiency-table {width:90%; margin: 0 auto;}
+#prof-table-axis { width:150px; }
+#prof-table-item {}
 
 /* FOOTER */
 #footer {bottom:0; left:0; right:0; 
@@ -95,13 +104,21 @@ nav.shrink .nav-link-tile {display:none;}
 #footer-contact-section{ margin-right:5px; position:absolute; right:0; }
 #footer-contact-button {background:#f78b1c; margin-top:5px; padding:0 6px; border-radius: 5px; cursor:pointer; display:inline-block;}
 
-#footer-pixel-wrapper {visibility:hidden; width:185px; display:inline-block;position:relative;}
+#footer-pixel-wrapper {visibility:hidden; width:270px; display:inline-block;position:relative;}
 #pixel-self-portrait { top:-170px; position:absolute; }
 #pixel-phone {position:absolute; top:-168px; left:137px; height:100px; }
-#footer-contact-info {line-height: 32px;user-select:initial; width:175px;height:110px;background:#6cc8af; position:absolute; top:-152px; right:-180px; border-radius:5px;}
+#footer-contact-info {padding:8px;line-height: 32px;user-select:initial; width:260px;height:110px;background:#6cc8af; position:absolute; top:-152px; right:-180px; border-radius:5px;}
 
-#copy-button {border-radius:5px;cursor:pointer;font-size: 17px; background:#FFC88D; text-align:center; width:50px; margin:0 auto;}
-#copy-button:active {background:#c89661;}
+#copy-button {border-radius:5px;cursor:pointer;font-size: 17px; background:#FFC88D; text-align:center; margin-left:auto;}
+#copy-button:hover {background:#c89661;}
+#copied-notif {    color: #4c4c4c;
+    top: -195px;
+    background: #ffc88d;
+    border-radius: 5px;
+    padding: 3px;
+    z-index: -1;
+    right: -175px;
+    position: absolute; display:none;}
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

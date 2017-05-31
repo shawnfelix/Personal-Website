@@ -1,11 +1,19 @@
 function copyToClipboard(element) {
+  $('#copied-notif').show().removeClass('fadeOut');
+  $('#copied-notif').show().addClass('fadeIn');
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
+
+  setTimeout(hideCopiedNotif, 2500);
 }
 
+function hideCopiedNotif(){
+  $('#copied-notif').removeClass('fadeIn');
+  $('#copied-notif').addClass('fadeOut');
+}
 //Mouseover navbar links
 $(".nav-link-box").hover(
   function(){//on mouseover
