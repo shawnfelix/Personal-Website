@@ -1,0 +1,717 @@
+/*
+	Theme Name: HTML5 Blank
+	Theme URI: http://html5blank.com
+	Description: HTML5 Blank WordPress Theme
+	Version: 1.4.3
+	Author: Todd Motto (@toddmotto)
+	Author URI: http://toddmotto.com
+	Tags: Blank, HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+
+
+/* 
+
+SF fonts 
+
+*/
+
+@font-face {
+    font-family: Less;
+    src: url("fonts/Less.otf") format("opentype");
+}
+@font-face {
+    font-family: Less-Light;
+    src: url("fonts/Less-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Less-Bold;
+    src: url("fonts/Less-Bold.otf") format("opentype");
+}
+
+body { 
+	background: url("img/background-texture.png");
+	/*background:#1F363D; */
+	letter-spacing:1px;
+}
+
+header *{
+	font-family: Less;
+	font-size:15px;
+	color:white;
+}
+header {
+	height: 100px;
+	width:100%;
+	position:fixed;
+	background: #3c535a7a;
+}
+#header-spacing {
+	height:100px;
+}
+#header-logo{
+	background: url("img/text-only-logo.png");
+	background-repeat: no-repeat;
+	background-size:contain;
+
+	
+}
+#header-logo-wrapper{
+	height:100%;
+	width:200px;
+	display: inline-block;
+	margin-left:5%;
+	position:relative;
+}
+#logo-img {
+	height: 62px;
+    position: absolute;
+    display: inline-block;
+    bottom: 25%;
+    cursor:pointer;
+}
+#logo-text-wrapper {
+	position:absolute;
+	display:inline-block;
+	top:50%;
+	transform: translateY(-50%);
+}
+#logo-text-web-dev {
+	font-family:Less-Bold;
+	color:#a7cfe6;
+	font-size:15px;
+	position:relative;
+	transform: translateY(-18px) translateX(12px);	
+}
+#nav-wrapper {
+	height:100%;
+	right:0;
+	position:relative;
+	max-width:1000px;
+	float:right;
+
+}
+nav {
+	position:relative;
+	top:50%;
+	transform: translateY(-50%);
+	float:right;
+	margin-right: 80px;
+}
+
+nav > ul > .menu-item {
+	cursor:pointer;
+	display:inline-block;
+	letter-spacing:3px;
+}
+nav > ul > .menu-item div {
+	padding: 10px 20px;
+}
+.section {
+	text-rendering: optimizeLegibility;
+}
+.section-centering {
+	margin:0 auto;
+	max-width:1000px;
+	padding-top:100px;
+}
+
+#portrait-wrapper{
+	width:20%;
+	display:flex;
+	height:100%;
+}
+#portrait{
+	display:inline-block;
+	max-height: 230px;
+	max-width:30%;
+}
+#freelance-title-wrapper {
+	display:inline-block;
+	max-width:1000px;
+	width:100%;
+	margin:0 auto;
+	max-width: 56%;
+	padding: 35px;
+    background: #3c535a7a;
+}
+#contact-title-wrapper {
+	width:100%;
+	max-width:1000px;
+	margin:0 auto;
+	margin:0 auto;
+	padding: 35px;
+	background: #3c535a7a;
+}
+.opacity-background{
+	background: #3c535a7a;
+}
+#section-freelance-title {
+	color:#e5e2e2;
+}
+#freelance-title {
+	font-family:Less-Light;
+	font-size:56px;
+	letter-spacing:2px;
+}
+#freelance-subtitle, #freelance-subtitle-two {
+	font-size:24px;
+	font-family:Less-Light;
+	line-height:55px;
+}
+#get-started-wrapper{
+	z-index:100;
+	max-width:400px;
+	margin:0 auto;
+}
+
+#get-started-button {
+	font-size: 40px;
+	text-align:center;
+}
+
+
+
+#section-macbook {
+	margin-top:40px;
+	margin-bottom:40px;
+}
+#macbook-wrapper {
+	width:100%;
+}
+#macbook {
+	margin:0 auto;
+	display:block;
+	max-width:1000px;
+	width:100%;
+}
+
+#macbook-text-one{
+	font-family: Less-Bold;
+	font-size:30px;
+	color:#f5cb5c;
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+
+.tagline-text {
+	font-family: Less-Light;
+	letter-spacing:1px;
+}
+#tagline-text1 {
+}
+#tagline-text2 {
+	display: inline-block;
+    line-height: 120px;
+    vertical-align: middle;
+}
+#section-tagline{
+	margin-top:-2px;
+	background:#c1dbeb;
+	text-align:left;
+	overflow:auto;
+}
+#tagline-container {
+  color:#1f363d;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  width:100%;
+  bottom:45%;
+  display: block;
+  padding-bottom:0px;
+  padding-top:50px;
+}
+
+#flip {
+	top: 12px;
+    position: relative;
+  height:50px;
+  overflow:hidden;display: inline-block;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 7s linear infinite;
+}
+
+#flip div div {
+  background:#6dbde8;
+}
+#flip div:first-child div {
+  background:#40788c;
+}
+#flip div:last-child div {
+  background:#ce1c27;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-186px;}
+  33% {margin-top:-186px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+p {
+  bottom:30px;
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}
+/* ------------------------
+	ANIMATIONS
+
+*/
+.threedout{
+	animation-name:threedanimateOut;
+	animation-duration:.1s;
+	animation-timing-function: ease-in;
+}
+.threed
+{
+	animation-name:threedanimateIn;
+	animation-duration:.1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+}
+@keyframes threedanimateIn {
+	from{background:#1F363D;}
+	to {background:#30505a;transform: translateX(-4px) translateY(-4px);
+			box-shadow:
+            3px 3px #132125,
+            4px 4px #132125,
+            3px 3px #132125;}
+}
+@keyframes threedanimateOut {
+	from {background:#30505a;transform: translateX(-2px) translateY(-2px);
+			box-shadow:
+            1px 1px #132125,
+            2px 2px #132125,
+            3px 3px #132125;}
+    to{background:#1F363D;}        
+}
+
+
+
+/** WAVES ANIMATION ***/
+svg {
+  width:100%;
+}
+.arrow {
+  stroke-width: .3px;
+  stroke:yellow;
+}
+.topball {
+  animation: ball 1.5s ease-in-out;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-delay: 0.3s;
+  cursor:pointer;
+}
+.wave {
+  animation: wave 3s linear;
+  animation-iteration-count:infinite;
+  fill: #c1dbeb;
+}
+.drop {
+  fill: transparent;
+  animation: drop 5s ease infinite normal;
+  stroke: #4478e3;
+  stroke-width:0.5;
+  opacity:.6; 
+  transform: translateY(80%);
+}
+
+#wave2 {
+  animation-duration:5s;
+  animation-direction: reverse;
+  opacity: .6
+}
+#wave3 {
+  animation-duration: 7s;
+  opacity:.3;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(80%); 
+    opacity:.6; 
+  }
+  80% {
+    transform: translateY(80%); 
+    opacity:.6; 
+  }
+  90% { 
+    transform: translateY(10%) ; 
+    opacity:.6; 
+  }
+  100% { 
+    transform: translateY(0%) scale(1.5);  
+    stroke-width:0.2;
+    opacity:0; 
+  }
+}
+@keyframes wave {
+  to {transform: translateX(-100%);}
+}
+@keyframes ball {
+  to {transform: translateY(20%);}
+}
+
+/** END WAVES ANIMATION **/
+
+
+/** BOXES BUTTON HOVER **/
+.boxes-btn {
+  border: 5px solid #1f363d;
+  color: #1f363d;
+  display: block;
+  font-family: 'trebuchet ms';
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor:pointer;
+  background:#f5cb5c;
+  transition: background .2s ease-out;
+}
+
+.boxes-btn:hover {
+	background:#b78e23;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.inline-icon {
+	vertical-align: middle;
+	width:35px;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+	max-width:1280px;
+	width:95%;
+	margin:0 auto;
+	position:relative;
+}
+/* header */
+.header {
+
+}
+/* logo */
+.logo {
+
+}
+.logo-img {
+
+}
+/* nav */
+.nav {
+
+}
+/* sidebar */
+.sidebar {
+
+}
+/* footer */
+.footer {
+
+}
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
